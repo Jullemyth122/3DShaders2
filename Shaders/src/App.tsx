@@ -7,6 +7,9 @@ import { SphereShade2 } from './Shader1/SphereShade2'
 import { BufferShaders14 } from './Shader1/BufferShaders14'
 import { StrangeAttractor } from './Shader1/StrangeAttractor'
 import { BufferShader1 } from './Shader1/BufferShader1'
+import { ParticleBuffer } from './Shader1/ParticleBuffer'
+import { ParticleBuffer2 } from './Shader1/ParticleBuffer2'
+import { ParticleBuffer3 } from './Shader1/ParticleBuffer3'
 
 const App = () => {
   return (
@@ -21,7 +24,10 @@ const App = () => {
         {/* <SphereShade2 /> */}
         {/* <BufferShaders14 /> */}
         {/* <StrangeAttractor /> */}
-        <BufferShader1 />
+        {/* <BufferShader1 /> */}
+        {/* <ParticleBuffer /> */}
+        {/* <ParticleBuffer2 /> */}
+        <ParticleBuffer3 />
         <OrbitControls /> 
       </Canvas>
     </div>
