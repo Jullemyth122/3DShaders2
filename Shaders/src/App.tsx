@@ -3,21 +3,28 @@ import { SphereShade } from './Shader1/SphereShade'
 import { OrbitControls } from '@react-three/drei'
 import * as THREE from 'three'
 import {Sphere2Shader} from './Shader1/Sphere2Shader'
+import { SphereShade2 } from './Shader1/SphereShade2'
+import { BufferShaders14 } from './Shader1/BufferShaders14'
+import { StrangeAttractor } from './Shader1/StrangeAttractor'
+import { BufferShader1 } from './Shader1/BufferShader1'
 
 const App = () => {
   return (
-    <Canvas
-      camera={{position: [0,0,0.25]}} 
-      dpr={[1, 2]} 
-      gl={{ 
-        toneMapping: THREE.NoToneMapping,
-        outputColorSpace: THREE.SRGBColorSpace,
-      }}
-    >
-      {/* <OrbitControls makeDefault /> */}
-      {/* <SphereShade /> */}
-      <Sphere2Shader />
-    </Canvas>
+    <div style={{ width: '100%', height: '100vh' }}> {/* Responsive container */}
+      <Canvas
+        style={{ width: '100%', height: '100%' }} // Fills the parent
+        dpr={[1, 2]} // Handles high-DPI screens
+        camera={{ position: [0, 0, 5], fov: 50 }} 
+      >
+        <ambientLight intensity={0.5} />
+        <pointLight position={[10, 10, 10]} />
+        {/* <SphereShade2 /> */}
+        {/* <BufferShaders14 /> */}
+        {/* <StrangeAttractor /> */}
+        <BufferShader1 />
+        <OrbitControls /> 
+      </Canvas>
+    </div>
   )
 }
 
